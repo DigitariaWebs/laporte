@@ -11,11 +11,16 @@ const display = Bebas_Neue({
 const body = Inter({ subsets: ['latin'], variable: '--font-body' });
 
 export const metadata: Metadata = {
-  title: 'La Belle et La Bœuf — Clone Démo',
+  title: 'La porte',
   description:
-    "Recréation de la mise en page: barre latérale gauche, sections promotionnelles et infolettre.",
+    "Restaurant La porte — burgers et cuisine. Barre latérale, promos, infolettre et contact.",
   metadataBase: new URL('https://example.com'),
   alternates: { canonical: '/' },
+  icons: {
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
+    shortcut: '/images/logo.png',
+  },
 };
 
 export default function RootLayout({

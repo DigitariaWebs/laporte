@@ -26,7 +26,7 @@ export default function Footer(): JSX.Element {
         </ul>
       </div>
       <div className="border-t border-white/10 py-4 text-center text-xs text-white/60">
-        © {new Date().getFullYear()} La Belle et La Bœuf — Projet de démonstration.
+        © {new Date().getFullYear()} La porte. Tous droits réservés.
       </div>
     </footer>
   );
