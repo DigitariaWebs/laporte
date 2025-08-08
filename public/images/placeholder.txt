@@ -1,0 +1,4 @@
+Local images are generated as simple gradients by CSS or placed as small jpeg placeholders.
+This file ensures the directory exists in the repository.
+
+
