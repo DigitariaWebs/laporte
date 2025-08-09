@@ -15,13 +15,24 @@ export const assets = {
     ],
   },
   pdfs: {
-    menu: "/pdf/menu",
-    kidsMenu: "/pdf/menu-enfants",
+    menu: "/menuresteau.pdf",
+    kidsMenu: "/Menuenfant.pdf",
   },
   sections: {
     centerpiece: {
       background: "/images/frame.svg",
       image: "/images/burgers.svg",
     },
+  },
+  gallery: {
+    images: [
+      { src: "/images/gallery1.jpg", alt: "Galerie 1" },
+      { src: "/images/gallery2.jpg", alt: "Galerie 2" },
+      { src: "/images/gallery3.jpg", alt: "Galerie 3" },
+      { src: "/images/gallery4.jpg", alt: "Galerie 4" },
+      { src: "/images/gallery5.jpg", alt: "Galerie 5" },
+      { src: "/images/gallery6.jpg", alt: "Galerie 6" },
+      { src: "/images/gallery7.jpg", alt: "Galerie 7" },
+    ],
   },
 };

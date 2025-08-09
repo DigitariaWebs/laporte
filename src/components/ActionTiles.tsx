@@ -1,8 +1,6 @@
 export default function ActionTiles(): JSX.Element {
   const tiles = [
-    { label: 'Promos & Événements' },
-    { label: 'Trouve un restaurant' },
-    { label: 'Offre une carte-cadeau !' },
+    // Cards removed as requested
   ];
 
   return (

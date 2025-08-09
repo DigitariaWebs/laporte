@@ -49,9 +49,33 @@ npm run generate:images  # generate placeholder images (optional)
 
 ## Asset routing
 - Centralized in `src/config/assets.ts` (logos, hero slides, PDFs, section images).
-- PDFs open viewer routes:
-  - `/pdf/menu` → embeds `/menuresteau.pdf`
-  - `/pdf/menu-enfants` → embeds `/Menuenfant.pdf`
+- PDF links use direct public paths and open in a new tab:
+  - `assets.pdfs.menu` → `/menuresteau.pdf`
+  - `assets.pdfs.kidsMenu` → `/Menuenfant.pdf`
+  - When rendering links, use `<a target="_blank" rel="noopener noreferrer">`.
+  - Legacy viewer routes under `src/app/pdf/...` still exist but are not used by the UI.
+
+## Sidebar “Menus” sliding panel
+- Fixed left sidebar is 200px on md+.
+- Clicking the top-level `Menus` item opens a red panel rendered in a `body` portal so it sits above all sections (z-index `9999`).
+- The panel width matches the sidebar (200px) and appears immediately to its right.
+- While open: page scroll is locked, backdrop area to the right of the sidebar applies `backdrop-blur-sm`, click-away and `Escape` close, and the plus icon rotates.
+- Panel contains only two items which open PDFs in a new tab:
+  - “Menu — PDF” → `assets.pdfs.menu`
+  - “Menu Enfants — PDF” → `assets.pdfs.kidsMenu`
+
+## Order CTA dropdown (header)
+- In `TopCtas`, the “Commande maintenant” button opens a dropdown with two actions:
+  - DoorDash logo (Brandfetch URL)
+  - Uber Eats logo (Brandfetch URL) with `invert` to render white on white
+- Dropdown is controlled by state to keep it open while moving the mouse; opens on hover/focus and toggles on click. Replace `href="#"` with real store URLs when available.
+
+## Centerpiece animation
+- `src/components/Centerpiece.tsx` is a client component using Intersection Observer to slide the burgers image in from the right on scroll (`translate-x` + opacity transition).
+- Keep as dependency-free Tailwind + observer; adjust thresholds/duration via component state if needed.
+
+## Removed/replaced
+- The dedicated `/menu` page was removed in favor of the sidebar sliding panel.
 
 ## PR/Change Guidance for Claude
 - Prefer small, focused edits; match existing code style.

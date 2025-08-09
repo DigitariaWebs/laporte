@@ -30,6 +30,25 @@ export default function Contact(): JSX.Element {
         </div>
 
         <div className="mx-auto max-w-4xl bg-brand-offwhite p-8 text-black shadow-card">
+          {/* Contact Info */}
+          <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="text-center md:text-left">
+              <h4 className="mb-2 font-display text-xl uppercase text-brand-red">Adresse</h4>
+              <p className="text-sm">
+                802 Rue Saint-Isidore<br />
+                Saint-Lin - Laurentides, QC J5M 2V4<br />
+                Canada
+              </p>
+            </div>
+            <div className="text-center md:text-right">
+              <h4 className="mb-2 font-display text-xl uppercase text-brand-red">Téléphone</h4>
+              <p className="text-sm">
+                <a href="tel:+14504391711" className="hover:text-brand-red transition-colors">
+                  +1 450-439-1711
+                </a>
+              </p>
+            </div>
+          </div>
         <form onSubmit={submit} className="grid grid-cols-1 gap-6">
           <div>
             <label htmlFor="name" className="mb-1 block text-sm font-medium">

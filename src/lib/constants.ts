@@ -4,13 +4,15 @@ export type NavItem = {
 };
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Menus', href: '#' },
-  { label: 'Promos & Événements', href: '#' },
-  { label: 'Concept & Histoire', href: '#' },
-  { label: 'Réserve en ligne', href: '#' },
-  { label: 'Trouve un restaurant', href: '#' },
-  { label: 'Commande maintenant', href: '#' },
-  { label: 'Franchise', href: '#' },
+  // Big links (primary)
+  { label: 'Home', href: '/' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+  // Small links (secondary)
+  { label: 'Commande maintenant', href: '/#order' },
+  { label: 'Pots Lundi Mason', href: '/#mason' },
+  { label: 'Heures Joyeuses', href: '/#happy-hours' },
 ];
 
 export const SOCIALS = [

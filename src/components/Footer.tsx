@@ -4,23 +4,23 @@ export default function Footer(): JSX.Element {
       <div className="container mx-auto px-4 py-6">
         <ul className="flex flex-wrap items-center justify-center gap-8 text-sm uppercase tracking-wider text-white/90">
           <li>
-            <a href="#" className="hover:text-brand-red focus-visible:text-brand-red">
-              Franchise
+            <a href="/" className="hover:text-brand-red focus-visible:text-brand-red">
+              Accueil
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-brand-red focus-visible:text-brand-red">
-              Emplois
+            <a href="/gallery" className="hover:text-brand-red focus-visible:text-brand-red">
+              Galerie
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-brand-red focus-visible:text-brand-red">
-              Concept & Histoire
+            <a href="/about" className="hover:text-brand-red focus-visible:text-brand-red">
+              À propos
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-brand-red focus-visible:text-brand-red">
-              Nous joindre
+            <a href="/contact" className="hover:text-brand-red focus-visible:text-brand-red">
+              Contact
             </a>
           </li>
         </ul>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Bebas_Neue, Inter } from 'next/font/google';
 import '@/app/globals.css';
-import Sidebar from '@/components/Sidebar';
+import ClientLayout from '@/components/ClientLayout';
 
 const display = Bebas_Neue({
   weight: '400',
@@ -35,12 +35,9 @@ export default function RootLayout({
         >
           Aller au contenu principal
         </a>
-        <div className="md:pl-[200px]">
-          <Sidebar />
-          <main id="contenu" className="min-h-screen">
-            {children}
-          </main>
-        </div>
+        <ClientLayout>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );
