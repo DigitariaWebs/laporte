@@ -19,9 +19,9 @@ export default function HeroBanner(): ReactElement {
   // Variants for directional slide
   const variants = useMemo(
     () => ({
-      enter: (dir: number) => ({ x: dir > 0 ? 800 : -800, opacity: 0 }),
+      enter: (dir: number) => ({ x: dir > 0 ? 100 : -100, opacity: 0 }),
       center: { x: 0, opacity: 1 },
-      exit: (dir: number) => ({ x: dir > 0 ? -800 : 800, opacity: 0 }),
+      exit: (dir: number) => ({ x: dir > 0 ? -100 : 100, opacity: 0 }),
     }),
     [],
   );
@@ -38,9 +38,9 @@ export default function HeroBanner(): ReactElement {
   };
 
   return (
-    <section className="relative isolate">
-      <div className="relative w-full bg-black aspect-[2/1]">
-        <AnimatePresence mode="wait" custom={direction}>
+    <section className="relative isolate pt-6 md:pt-0">
+      <div className="relative w-full aspect-[2/1] overflow-hidden">
+        <AnimatePresence mode="popLayout" custom={direction}>
           <motion.div
             key={assets.hero.slides[index].src}
             custom={direction}
@@ -48,7 +48,11 @@ export default function HeroBanner(): ReactElement {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ 
+              duration: 0.5, 
+              ease: [0.25, 0.46, 0.45, 0.94],
+              opacity: { duration: 0.4, ease: "easeInOut" }
+            }}
             className="absolute inset-0"
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
@@ -58,7 +62,7 @@ export default function HeroBanner(): ReactElement {
               src={assets.hero.slides[index].src}
               alt={assets.hero.slides[index].alt}
               fill
-              className="object-contain"
+              className="object-cover"
               sizes="100vw"
               priority
             />

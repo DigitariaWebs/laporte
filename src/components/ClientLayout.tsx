@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import LoadingScreen from './LoadingScreen';
 import Sidebar from './Sidebar';
+import FloatingButtons from './FloatingButtons';
 import { assets } from '@/config/assets';
 import type { ReactElement, ReactNode } from 'react';
 
@@ -16,6 +17,7 @@ export default function ClientLayout({ children }: ClientLayoutProps): ReactElem
   const [minDelayComplete, setMinDelayComplete] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [hasMounted, setHasMounted] = useState(false);
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
 
   // Handle hydration
   useEffect(() => {
@@ -111,10 +113,17 @@ export default function ClientLayout({ children }: ClientLayoutProps): ReactElem
 
   return (
     <div className="md:pl-[200px]">
-      <Sidebar />
+      <Sidebar 
+        isMobileOpen={isMobileSidebarOpen} 
+        onMobileClose={() => setIsMobileSidebarOpen(false)} 
+      />
       <main id="contenu" className="min-h-screen">
         {children}
       </main>
+      <FloatingButtons 
+        onHamburgerToggle={() => setIsMobileSidebarOpen(!isMobileSidebarOpen)}
+        isHamburgerOpen={isMobileSidebarOpen}
+      />
     </div>
   );
 }

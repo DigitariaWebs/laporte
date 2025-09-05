@@ -28,7 +28,7 @@ export default function Centerpiece(): ReactElement {
 
   return (
     <section
-      className="relative w-full min-h-[360px] md:min-h-[480px]"
+      className="relative w-full min-h-[240px] md:min-h-[320px]"
       style={{
         backgroundImage: `url(${assets.sections.centerpiece.background})`,
         backgroundSize: 'cover',
@@ -36,11 +36,11 @@ export default function Centerpiece(): ReactElement {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="container mx-auto grid place-items-center px-4 py-20">
+      <div className="container mx-auto grid place-items-center px-4 py-12">
         <div
           ref={imageWrapperRef}
           className={[
-            "relative h-96 w-full max-w-6xl md:h-[560px]",
+            "relative h-64 w-full max-w-4xl md:h-[400px]",
             // animation
             "transition-all duration-700 ease-out will-change-transform",
             // start off-screen to the right and faded

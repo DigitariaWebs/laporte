@@ -6,5 +6,8 @@ export { default as PromoDoubles } from './PromoDoubles';
 export { default as ActionTiles } from './ActionTiles';
 export { default as Newsletter } from './Newsletter';
 export { default as Footer } from './Footer';
+export { default as FloatingCallButton } from './FloatingCallButton';
+export { default as FloatingHamburgerButton } from './FloatingHamburgerButton';
+export { default as FloatingButtons } from './FloatingButtons';
 
 
