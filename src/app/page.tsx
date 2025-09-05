@@ -14,7 +14,6 @@ export default function Home() {
     <>
       <TopCtas />
       <HeroBanner />
-      <SectionStrip title="COMMANDE MAINTENANT" />
       <Centerpiece />
       <PromoDoubles />
       <Partners />

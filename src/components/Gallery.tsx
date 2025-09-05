@@ -28,41 +28,11 @@ export default function Gallery(): ReactElement {
           </p>
         </motion.div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {assets.gallery.images.map((image, index) => (
-            <motion.div
-              key={image.src}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ 
-                duration: 0.5, 
-                delay: index * 0.1,
-                ease: "easeOut" 
-              }}
-              whileHover={{ 
-                scale: 1.05, 
-                transition: { duration: 0.3 } 
-              }}
-              className="group relative aspect-square overflow-hidden bg-white shadow-lg"
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-              
-              {/* Overlay on hover */}
-              <div className="absolute inset-0 bg-brand-red/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              
-              {/* Image number indicator */}
-              <div className="absolute bottom-4 left-4 bg-brand-red px-3 py-1 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <span className="text-sm font-medium">{String(index + 1).padStart(2, '0')}</span>
-              </div>
-            </motion.div>
-          ))}
+        {/* Gallery Grid - Photos removed */}
+        <div className="text-center py-16">
+          <p className="text-lg text-brand-black/60">
+            Photos de la galerie à venir bientôt...
+          </p>
         </div>
 
         {/* Bottom spacing */}

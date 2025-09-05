@@ -31,7 +31,7 @@ export default function Contact(): JSX.Element {
 
         <div className="mx-auto max-w-4xl bg-brand-offwhite p-8 text-black shadow-card">
           {/* Contact Info */}
-          <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3">
             <div className="text-center md:text-left">
               <h4 className="mb-2 font-display text-xl uppercase text-brand-red">Adresse</h4>
               <p className="text-sm">
@@ -40,12 +40,20 @@ export default function Contact(): JSX.Element {
                 Canada
               </p>
             </div>
-            <div className="text-center md:text-right">
+            <div className="text-center">
               <h4 className="mb-2 font-display text-xl uppercase text-brand-red">Téléphone</h4>
               <p className="text-sm">
                 <a href="tel:+14504391711" className="hover:text-brand-red transition-colors">
                   +1 450-439-1711
                 </a>
+              </p>
+            </div>
+            <div className="text-center md:text-right">
+              <h4 className="mb-2 font-display text-xl uppercase text-brand-red">Heures D'ouvertures</h4>
+              <p className="text-sm">
+                Lun - Jeu: 11h00 - 22h00<br />
+                Ven - Sam: 11h00 - 23h00<br />
+                Dim: 12h00 - 21h00
               </p>
             </div>
           </div>

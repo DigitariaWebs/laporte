@@ -37,20 +37,8 @@ export default function AboutUs(): ReactElement {
             className="space-y-6"
           >
             <div className="bg-white p-8 shadow-lg">
-              <p className="text-lg leading-relaxed text-brand-black/90">
-                Le Restaurant la Porte des Laurentides propose un menu diversifié rempli d'options délicieuses pour satisfaire toutes les envies. Des pizzas savoureuses aux brochettes magnifiquement présentées, en passant par tout ce qui se trouve entre les deux, il y en a pour tous les goûts.
-              </p>
-              
-              <p className="mt-6 text-lg leading-relaxed text-brand-black/90">
-                Le restaurant est fier de sa présentation culinaire, s'assurant que chaque plat soit non seulement savoureux mais aussi un régal pour les yeux. Les clients peuvent également se faire plaisir avec leurs poutines préférées, plats gratinés et sous-marins, tous préparés avec des ingrédients de haute qualité et des techniques culinaires expertes.
-              </p>
-              
-              <p className="mt-6 text-lg leading-relaxed text-brand-black/90">
-                Le restaurant offre également un service de livraison, permettant aux clients de savourer leurs plats préférés dans le confort de leur foyer. En plus des options alimentaires délectables, le restaurant propose également une variété de boissons pour accompagner le repas, en faisant l'endroit parfait pour profiter d'une expérience culinaire satisfaisante.
-              </p>
-              
-              <p className="mt-6 text-lg leading-relaxed text-brand-black/90">
-                Avec un accent mis sur la fourniture de nourriture et de boissons de premier ordre, le Restaurant la Porte des Laurentides est un incontournable pour tous ceux qui recherchent une expérience culinaire mémorable.
+              <p className="text-lg leading-relaxed text-brand-black/60 text-center">
+                Description à venir bientôt...
               </p>
             </div>
 
