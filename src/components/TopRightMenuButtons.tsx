@@ -33,7 +33,7 @@ export default function TopRightMenuButtons(): ReactElement {
         damping: 20,
         delay: 0.5 
       }}
-      className="fixed top-6 right-6 z-40 flex-col gap-3 hidden md:flex"
+      className="fixed top-15 right-6 z-40 flex-col gap-3 hidden md:flex"
     >
       {/* Menu Livraisons Button */}
       <motion.a

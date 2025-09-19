@@ -24,7 +24,7 @@ export default function FloatingCallButton(): ReactElement {
         whileTap={{ scale: 0.95 }}
         aria-label="Appeler le restaurant"
       >
-        <Image src="/images/redCabin.png" alt="Appeler le restaurant" width={55} height={55} />
+        <Image src="/images/redCabin1.png" alt="Appeler le restaurant" width={55} height={55} />
         
         {/* Pulse animation */}
         <motion.div
