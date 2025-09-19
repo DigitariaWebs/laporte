@@ -1,9 +1,9 @@
 "use client";
 
-import { Phone } from 'lucide-react';
+import { Building } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ReactElement } from 'react';
-
+import Image from 'next/image';
 export default function FloatingCallButton(): ReactElement {
   return (
     <motion.div
@@ -19,12 +19,12 @@ export default function FloatingCallButton(): ReactElement {
     >
       <motion.a
         href="tel:+14504391711"
-        className="group relative flex items-center justify-center w-16 h-16 bg-brand-red text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-brand-red/30"
+        className="group relative flex items-center justify-center w-20 h-20 bg-brand-red text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-brand-red/30"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Appeler le restaurant"
       >
-        <Phone className="h-6 w-6" />
+        <Image src="/images/redCabin.png" alt="Appeler le restaurant" width={55} height={55} />
         
         {/* Pulse animation */}
         <motion.div

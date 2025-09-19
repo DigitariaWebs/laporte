@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import LoadingScreen from './LoadingScreen';
 import Sidebar from './Sidebar';
 import FloatingButtons from './FloatingButtons';
+import TopRightMenuButtons from './TopRightMenuButtons';
 import { assets } from '@/config/assets';
 import type { ReactElement, ReactNode } from 'react';
 
@@ -124,6 +125,7 @@ export default function ClientLayout({ children }: ClientLayoutProps): ReactElem
         onHamburgerToggle={() => setIsMobileSidebarOpen(!isMobileSidebarOpen)}
         isHamburgerOpen={isMobileSidebarOpen}
       />
+      <TopRightMenuButtons />
     </div>
   );
 }

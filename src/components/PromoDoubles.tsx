@@ -18,13 +18,12 @@ function PromoCard({ title, subtitle, image, price }: PromoCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-20% 0px' }}
       transition={{ duration: 0.5 }}
-      className="group relative h-72 overflow-hidden border border-white/10 bg-black shadow-none transition-all hover:-translate-y-1.5 hover:shadow-card md:h-96"
+      className="group relative h-72 overflow-hidden border border-white/10 bg-red shadow-none transition-all hover:-translate-y-1.5 hover:shadow-card md:h-96"
     >
       {/* Full-bleed image */}
-      <div className="absolute inset-0">
-        <Image src={image} alt="Promo visuel" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+      <div className="absolute inset-0 bg-red">
+        <Image src={image} alt="Promo visuel" fill sizes="(min-width: 400px) 50vw, 100vw" className="object-contain bg-red" />
       </div>
-      <div className="absolute inset-0 bg-black/35" />
 
       {/* Overlay content */}
       <div className="relative z-10 p-6">
@@ -42,17 +41,11 @@ function PromoCard({ title, subtitle, image, price }: PromoCardProps) {
 
 export default function PromoDoubles(): ReactElement {
   return (
-    <section className="container mx-auto grid gap-6 px-4 py-10 md:grid-cols-2">
+    <section className="container mx-auto grid gap-6 px-4 py-10 md:grid-cols-1 bg-red">
       <PromoCard
-        title="Pots Lundi Mason"
-        image="/images/mojitos.png"
-        price="10.95"
-      />
-      <PromoCard
-        title="Heures Joyeuses"
-        subtitle="Lundi au Mercredi"
-        image="/images/drinks.png"
-        price="7.95"
+        title="Événements à venir"
+        image="/images/comingsoon.png"
+        price=""
       />
     </section>
   );

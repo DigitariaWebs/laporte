@@ -9,5 +9,6 @@ export { default as Footer } from './Footer';
 export { default as FloatingCallButton } from './FloatingCallButton';
 export { default as FloatingHamburgerButton } from './FloatingHamburgerButton';
 export { default as FloatingButtons } from './FloatingButtons';
+export { default as TopRightMenuButtons } from './TopRightMenuButtons';
 
 

@@ -11,8 +11,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Contact', href: '/contact' },
   // Small links (secondary)
   { label: 'Commande maintenant', href: '/#order' },
-  { label: 'Pots Lundi Mason', href: '/#mason' },
-  { label: 'Heures Joyeuses', href: '/#happy-hours' },
+  { label: 'Événements à venir', href: '/#events' },
 ];
 
 export const SOCIALS = [

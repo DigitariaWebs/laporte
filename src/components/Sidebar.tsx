@@ -186,19 +186,21 @@ export default function Sidebar({ isMobileOpen = false, onMobileClose }: Sidebar
                     <X className="h-6 w-6" />
                   </button>
 
-                  <div className="h-full overflow-y-auto p-6">
-                    <ul className="space-y-6">
+                  <div className="h-full overflow-y-auto p-6 flex flex-col">
+                    <ul className="space-y-6 flex-1">
                       <li>
                         <a href={assets.pdfs.menu} target="_blank" rel="noopener noreferrer" className="block font-display text-xl uppercase">
                           Menu — PDF
                         </a>
                       </li>
-                      <li>
-                        <a href={assets.pdfs.kidsMenu} target="_blank" rel="noopener noreferrer" className="block font-display text-xl uppercase">
-                          Menu Enfants — PDF
-                        </a>
-                      </li>
                     </ul>
+                    
+                    {/* Menu Enfant at the bottom */}
+                    <div className="mt-auto pt-6 border-t border-white/20">
+                      <a href={assets.pdfs.kidsMenu} target="_blank" rel="noopener noreferrer" className="block font-display text-lg uppercase text-white/90 hover:text-white transition-colors">
+                        Menu Enfant — PDF
+                      </a>
+                    </div>
                   </div>
                 </motion.aside>
               </motion.div>
@@ -270,30 +272,34 @@ export default function Sidebar({ isMobileOpen = false, onMobileClose }: Sidebar
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
                         >
-                          <ul className="mt-4 ml-6 space-y-3">
-                            <li>
-                              <a 
-                                href={assets.pdfs.menu} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className="block text-xl uppercase text-brand-red hover:underline py-1"
-                                onClick={onMobileClose}
-                              >
-                                Menu — PDF
-                              </a>
-                            </li>
-                            <li>
+                          <div className="mt-4 ml-6 flex flex-col">
+                            <ul className="space-y-3 flex-1">
+                              <li>
+                                <a 
+                                  href={assets.pdfs.menu} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer" 
+                                  className="block text-xl uppercase text-brand-red hover:underline py-1"
+                                  onClick={onMobileClose}
+                                >
+                                  Menu — PDF
+                                </a>
+                              </li>
+                            </ul>
+                            
+                            {/* Menu Enfant at the bottom */}
+                            <div className="mt-4 pt-3 border-t border-brand-red/20">
                               <a 
                                 href={assets.pdfs.kidsMenu} 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
-                                className="block text-xl uppercase text-brand-red hover:underline py-1"
+                                className="block text-lg uppercase text-brand-red/80 hover:text-brand-red hover:underline py-1"
                                 onClick={onMobileClose}
                               >
-                                Menu Enfants — PDF
+                                Menu Enfant — PDF
                               </a>
-                            </li>
-                          </ul>
+                            </div>
+                          </div>
                         </motion.div>
                       )}
                     </AnimatePresence>

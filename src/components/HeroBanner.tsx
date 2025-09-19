@@ -41,7 +41,7 @@ export default function HeroBanner(): ReactElement {
     <section className="relative isolate pt-6 md:pt-0">
       <div className="relative w-full aspect-[2/1] overflow-hidden">
         <AnimatePresence mode="popLayout" custom={direction}>
-          <motion.div
+          <motion.div 
             key={assets.hero.slides[index].src}
             custom={direction}
             variants={variants}
