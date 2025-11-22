@@ -50,19 +50,20 @@ npm run generate:images  # generate placeholder images (optional)
 ## Asset routing
 - Centralized in `src/config/assets.ts` (logos, hero slides, PDFs, section images).
 - PDF links use direct public paths and open in a new tab:
-  - `assets.pdfs.menu` → `/menuresteau.pdf`
+  - `assets.pdfs.menu` → `/Menu.pdf`
   - `assets.pdfs.kidsMenu` → `/Menuenfant.pdf`
   - When rendering links, use `<a target="_blank" rel="noopener noreferrer">`.
   - Legacy viewer routes under `src/app/pdf/...` still exist but are not used by the UI.
 
-## Sidebar “Menus” sliding panel
+## Sidebar "Menus" sliding panel
 - Fixed left sidebar is 200px on md+.
 - Clicking the top-level `Menus` item opens a red panel rendered in a `body` portal so it sits above all sections (z-index `9999`).
 - The panel width matches the sidebar (200px) and appears immediately to its right.
 - While open: page scroll is locked, backdrop area to the right of the sidebar applies `backdrop-blur-sm`, click-away and `Escape` close, and the plus icon rotates.
-- Panel contains only two items which open PDFs in a new tab:
-  - “Menu — PDF” → `assets.pdfs.menu`
-  - “Menu Enfants — PDF” → `assets.pdfs.kidsMenu`
+- Panel contains three menu items:
+  - "Menu Livraison" → `/menu-livraison` (page with full delivery menu)
+  - "Menu — PDF" → `assets.pdfs.menu` (opens PDF in new tab)
+  - "Menu Enfants — PDF" → `assets.pdfs.kidsMenu` (opens PDF in new tab)
 
 ## Order CTA dropdown (header)
 - In `TopCtas`, the “Commande maintenant” button opens a dropdown with two actions:

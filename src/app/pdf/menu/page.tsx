@@ -9,7 +9,7 @@ export default function Page() {
     <main className="min-h-[80vh] p-4">
       <div className="mx-auto w-full max-w-6xl">
         <iframe
-          src="/menuresteau.pdf"
+          src="/Menu.pdf"
           title="Menu"
           className="h-[80vh] w-full border-0"
         />

@@ -15,7 +15,7 @@ export const assets = {
     ],
   },
   pdfs: {
-    menu: "/menuresteau.pdf",
+    menu: "/Menu.pdf",
     kidsMenu: "/Menuenfant.pdf",
   },
   sections: {

@@ -189,6 +189,15 @@ export default function Sidebar({ isMobileOpen = false, onMobileClose }: Sidebar
                   <div className="h-full overflow-y-auto p-6 flex flex-col">
                     <ul className="space-y-6 flex-1">
                       <li>
+                        <Link 
+                          href="/menu-livraison" 
+                          className="block font-display text-xl uppercase hover:text-white/90 transition-colors"
+                          onClick={() => setMenuPanelOpen(false)}
+                        >
+                          Menu Livraison
+                        </Link>
+                      </li>
+                      <li>
                         <a href={assets.pdfs.menu} target="_blank" rel="noopener noreferrer" className="block font-display text-xl uppercase">
                           Menu — PDF
                         </a>
@@ -274,6 +283,15 @@ export default function Sidebar({ isMobileOpen = false, onMobileClose }: Sidebar
                         >
                           <div className="mt-4 ml-6 flex flex-col">
                             <ul className="space-y-3 flex-1">
+                              <li>
+                                <Link 
+                                  href="/menu-livraison" 
+                                  className="block text-xl uppercase text-brand-red hover:underline py-1"
+                                  onClick={onMobileClose}
+                                >
+                                  Menu Livraison
+                                </Link>
+                              </li>
                               <li>
                                 <a 
                                   href={assets.pdfs.menu} 
