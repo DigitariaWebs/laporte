@@ -341,7 +341,7 @@ export default function MenuLivraisonPage() {
               <h3 className="mb-3 font-display text-xl font-bold text-[#FFD400]">Adresse</h3>
               <p className="leading-relaxed">
                 802, rue Saint-Isidore<br />
-                Saint-Lin–Laurentides, QC J7M 2V4
+                Saint-Lin–Laurentides, QC J5M 2V4
               </p>
 
               <h3 className="mb-3 mt-6 font-display text-xl font-bold text-[#FFD400]">Téléphone</h3>

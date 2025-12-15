@@ -138,7 +138,7 @@ export default function Contact(): JSX.Element {
                 <div>
                   <span className="text-sm text-black/60">Heures d'ouverture</span>
                   <p className="text-black font-medium">
-                    Lun - Jeu: 11h00 - 22h00 · Ven - Sam: 11h00 - 23h00 · Dim: 12h00 - 21h00
+                    Lun - Jeu: 11h00 - 21h00 · Ven - Sam: 11h00 - 22h00 · Dim: 11h00 - 21h00
                   </p>
                 </div>
               </div>

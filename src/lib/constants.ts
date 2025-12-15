@@ -5,13 +5,10 @@ export type NavItem = {
 
 export const NAV_ITEMS: NavItem[] = [
   // Big links (primary)
-  { label: 'Home', href: '/' },
-  { label: 'Gallery', href: '/gallery' },
-  { label: 'About Us', href: '/about' },
-  { label: 'Contact', href: '/contact' },
-  // Small links (secondary)
-  { label: 'Commande maintenant', href: '/#order' },
-  { label: 'Événements à venir', href: '/#events' },
+  { label: 'Accueil', href: '/' },
+  { label: 'Galerie', href: '/gallery' },
+  { label: 'À notre sujet', href: '/about' },
+  { label: 'Nous joindre', href: '/contact' },
 ];
 
 export const SOCIALS = [
