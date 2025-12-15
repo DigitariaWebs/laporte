@@ -181,7 +181,7 @@ export default function MenuLivraisonPage() {
     <main className="min-h-screen bg-[#F3F1ED]">
       {/* Header */}
       <div className="bg-[#B5121B] py-12 text-center text-white">
-        <h1 className="font-display text-5xl font-bold uppercase tracking-wide md:text-6xl">
+        <h1 className="font-display text-5xl font-bold tracking-wide uppercase md:text-6xl">
           Menu de Livraison
         </h1>
         <p className="mt-4 text-xl font-light">Restaurant La Porte</p>
@@ -190,13 +190,14 @@ export default function MenuLivraisonPage() {
       <div className="mx-auto max-w-7xl px-4 py-12 md:px-8">
         {/* Pizzas Section */}
         <section className="mb-16">
-          <h2 className="mb-6 font-display text-4xl font-bold uppercase text-[#B5121B]">
+          <h2 className="font-display mb-6 text-4xl font-bold text-[#B5121B] uppercase">
             Nos Pizzas
           </h2>
-          
+
           <div className="mb-6 rounded-lg bg-white p-6 shadow-md">
             <p className="mb-3 font-semibold text-[#0B0B0B]">
-              Choix de sauce : <span className="font-normal">Sauce à la viande ou tomate basilic</span>
+              Choix de sauce :{' '}
+              <span className="font-normal">Sauce à la viande ou tomate basilic</span>
             </p>
             <div className="overflow-x-auto">
               <div className="flex gap-2 text-sm font-semibold text-[#B5121B]">
@@ -211,7 +212,10 @@ export default function MenuLivraisonPage() {
 
           <div className="space-y-4">
             {pizzas.map((pizza) => (
-              <div key={pizza.number} className="rounded-lg bg-white p-6 shadow-md transition-shadow hover:shadow-lg">
+              <div
+                key={pizza.number}
+                className="rounded-lg bg-white p-6 shadow-md transition-shadow hover:shadow-lg"
+              >
                 <div className="mb-4">
                   <h3 className="font-display text-2xl font-bold text-[#0B0B0B]">
                     {pizza.number}. {pizza.name}
@@ -235,16 +239,19 @@ export default function MenuLivraisonPage() {
 
           {/* Extras */}
           <div className="mt-6 rounded-lg bg-[#0B0B0B] p-6 text-white">
-            <h3 className="mb-4 font-display text-2xl font-bold uppercase">Extras</h3>
+            <h3 className="font-display mb-4 text-2xl font-bold uppercase">Extras</h3>
             <div className="space-y-2">
               <p>
-                <span className="font-semibold">Légumes :</span> 2,00 | 2,50 | 3,00 | 4,50 | 5,25
+                <span className="font-semibold">Légumes :</span> 2,00 | 2,50 | 3,00 | 4,50
+                | 5,25
               </p>
               <p>
-                <span className="font-semibold">Viandes / fromage / anchois :</span> 3,00 | 4,00 | 5,00 | 5,50 | 6,75 | 7,25
+                <span className="font-semibold">Viandes / fromage / anchois :</span> 3,00
+                | 4,00 | 5,00 | 5,50 | 6,75 | 7,25
               </p>
               <p>
-                <span className="font-semibold">Crevettes :</span> 5,00 | 6,00 | 7,00 | 9,00 | 11,00
+                <span className="font-semibold">Crevettes :</span> 5,00 | 6,00 | 7,00 |
+                9,00 | 11,00
               </p>
             </div>
           </div>
@@ -252,17 +259,22 @@ export default function MenuLivraisonPage() {
 
         {/* Frites et Poutines */}
         <section className="mb-16">
-          <h2 className="mb-6 font-display text-4xl font-bold uppercase text-[#B5121B]">
+          <h2 className="font-display mb-6 text-4xl font-bold text-[#B5121B] uppercase">
             Frites et Poutines
           </h2>
 
           <div className="grid gap-8 md:grid-cols-2">
             {/* Frites */}
             <div className="rounded-lg bg-white p-6 shadow-md">
-              <h3 className="mb-4 font-display text-2xl font-bold text-[#0B0B0B]">Frites</h3>
+              <h3 className="font-display mb-4 text-2xl font-bold text-[#0B0B0B]">
+                Frites
+              </h3>
               <div className="space-y-3">
                 {frites.map((item, index) => (
-                  <div key={index} className="flex justify-between border-b border-gray-200 pb-2">
+                  <div
+                    key={index}
+                    className="flex justify-between border-b border-gray-200 pb-2"
+                  >
                     <span className="text-gray-800">{item.name}</span>
                     <span className="font-bold text-[#B5121B]">{item.price} $</span>
                   </div>
@@ -272,8 +284,9 @@ export default function MenuLivraisonPage() {
 
             {/* Poutines */}
             <div className="rounded-lg bg-white p-6 shadow-md">
-              <h3 className="mb-4 font-display text-2xl font-bold text-[#0B0B0B]">
-                Poutines <span className="text-sm font-normal">(P = petite | G = grande)</span>
+              <h3 className="font-display mb-4 text-2xl font-bold text-[#0B0B0B]">
+                Poutines{' '}
+                <span className="text-sm font-normal">(P = petite | G = grande)</span>
               </h3>
               <div className="space-y-3">
                 {poutines.map((item, index) => (
@@ -288,7 +301,9 @@ export default function MenuLivraisonPage() {
                 ))}
                 <div className="mt-4 pt-2">
                   <div className="flex justify-between">
-                    <span className="font-semibold text-gray-800">Extra viande ou fromage</span>
+                    <span className="font-semibold text-gray-800">
+                      Extra viande ou fromage
+                    </span>
                     <span className="font-bold text-[#B5121B]">4,00 $ | 5,00 $</span>
                   </div>
                 </div>
@@ -299,22 +314,25 @@ export default function MenuLivraisonPage() {
 
         {/* Spéciaux */}
         <section className="mb-16">
-          <h2 className="mb-6 font-display text-4xl font-bold uppercase text-[#B5121B]">
+          <h2 className="font-display mb-6 text-4xl font-bold text-[#B5121B] uppercase">
             Nos Spéciaux
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {specials.map((special) => (
-              <div key={special.number} className="rounded-lg bg-white p-6 shadow-md transition-shadow hover:shadow-lg">
+              <div
+                key={special.number}
+                className="rounded-lg bg-white p-6 shadow-md transition-shadow hover:shadow-lg"
+              >
                 <div className="mb-4 flex items-start justify-between">
                   <span className="font-display text-3xl font-bold text-[#0B0B0B]">
                     {special.number}.
                   </span>
-                  <span className="rounded-full bg-[#FFD400] px-4 py-2 font-display text-2xl font-bold text-[#0B0B0B]">
+                  <span className="font-display rounded-full bg-[#FFD400] px-4 py-2 text-2xl font-bold text-[#0B0B0B]">
                     {special.price} $
                   </span>
                 </div>
-                <h3 className="mb-3 font-display text-xl font-bold text-[#B5121B]">
+                <h3 className="font-display mb-3 text-xl font-bold text-[#B5121B]">
                   {special.title}
                 </h3>
                 <ul className="space-y-2">
@@ -332,32 +350,63 @@ export default function MenuLivraisonPage() {
 
         {/* Informations */}
         <section className="rounded-lg bg-[#0B0B0B] p-8 text-white shadow-lg">
-          <h2 className="mb-6 font-display text-4xl font-bold uppercase text-[#FFD400]">
+          <h2 className="font-display mb-6 text-4xl font-bold text-[#FFD400] uppercase">
             Informations
           </h2>
 
           <div className="grid gap-8 md:grid-cols-2">
             <div>
-              <h3 className="mb-3 font-display text-xl font-bold text-[#FFD400]">Adresse</h3>
+              <h3 className="font-display mb-3 text-xl font-bold text-[#FFD400]">
+                Adresse
+              </h3>
               <p className="leading-relaxed">
-                802, rue Saint-Isidore<br />
+                802, rue Saint-Isidore
+                <br />
                 Saint-Lin–Laurentides, QC J5M 2V4
               </p>
 
-              <h3 className="mb-3 mt-6 font-display text-xl font-bold text-[#FFD400]">Téléphone</h3>
-              <a href="tel:450-439-1711" className="text-xl font-bold text-white hover:text-[#FFD400] transition-colors">
+              <h3 className="font-display mt-6 mb-3 text-xl font-bold text-[#FFD400]">
+                Téléphone
+              </h3>
+              <a
+                href="tel:450-439-1711"
+                className="text-xl font-bold text-white transition-colors hover:text-[#FFD400]"
+              >
                 450-439-1711
               </a>
             </div>
 
             <div>
-              <h3 className="mb-3 font-display text-xl font-bold text-[#FFD400]">Heures d'ouverture</h3>
+              <h3 className="font-display mb-3 text-xl font-bold text-[#FFD400]">
+                Heures d'ouverture
+              </h3>
               <div className="space-y-2 leading-relaxed">
-                <p><span className="font-semibold">Dimanche au mercredi :</span> 11h00 à 21h00</p>
-                <p><span className="font-semibold">Jeudi au samedi :</span> 11h00 à 22h00</p>
+                <p>
+                  <span className="font-semibold">Lundi :</span> 11h00 à 21h00
+                </p>
+                <p>
+                  <span className="font-semibold">Mardi :</span> 11h00 à 21h00
+                </p>
+                <p>
+                  <span className="font-semibold">Mercredi :</span> 11h00 à 21h00
+                </p>
+                <p>
+                  <span className="font-semibold">Jeudi :</span> 11h00 à 21h00
+                </p>
+                <p>
+                  <span className="font-semibold">Vendredi :</span> 11h00 à 22h00
+                </p>
+                <p>
+                  <span className="font-semibold">Samedi :</span> 11h00 à 22h00
+                </p>
+                <p>
+                  <span className="font-semibold">Dimanche :</span> 11h00 à 21h00
+                </p>
               </div>
 
-              <h3 className="mb-3 mt-6 font-display text-xl font-bold text-[#FFD400]">Livraison</h3>
+              <h3 className="font-display mt-6 mb-3 text-xl font-bold text-[#FFD400]">
+                Livraison
+              </h3>
               <div className="space-y-2 leading-relaxed">
                 <p>Minimum 15 $ avant taxes</p>
                 <p>Frais de 5 $ applicables pour certains secteurs</p>
