@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Check } from 'lucide-react';
@@ -14,7 +14,10 @@ export default function Contact(): JSX.Element {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: '' });
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
@@ -34,11 +37,24 @@ export default function Contact(): JSX.Element {
         body: JSON.stringify(formData),
       });
       if (res.ok) {
-        setSubmitStatus({ type: 'success', message: "Merci! Nous vous répondrons bientôt." });
-        setFormData({ name: '', email: '', phone: '', subject: '', otherSubject: '', message: '' });
+        setSubmitStatus({
+          type: 'success',
+          message: 'Merci! Nous vous répondrons bientôt.',
+        });
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          otherSubject: '',
+          message: '',
+        });
       } else {
         const data = await res.json().catch(() => ({}));
-        setSubmitStatus({ type: 'error', message: data.error || "Une erreur s'est produite." });
+        setSubmitStatus({
+          type: 'error',
+          message: data.error || "Une erreur s'est produite.",
+        });
       }
     } catch {
       setSubmitStatus({ type: 'error', message: "Un problème réseau s'est produit." });
@@ -49,28 +65,28 @@ export default function Contact(): JSX.Element {
 
   return (
     <section id="contact" className="bg-white py-16 md:py-20 lg:py-24">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="text-center mb-16">
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl uppercase tracking-wide text-brand-black mb-6">
+      <div className="mx-auto max-w-7xl px-4 md:px-8">
+        <div className="mb-16 text-center">
+          <h1 className="font-display text-brand-black mb-6 text-4xl tracking-wide uppercase md:text-5xl lg:text-6xl">
             NOUS JOINDRE
           </h1>
-          <p className="text-lg md:text-xl text-black/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="mx-auto max-w-3xl text-lg leading-relaxed text-black/80 md:text-xl">
             Pour toute question, réservation ou information, n'hésitez pas à nous écrire.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Left */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-display uppercase text-brand-black mb-6">
+            <h2 className="font-display text-brand-black mb-6 text-3xl uppercase md:text-4xl">
               Coordonnées
             </h2>
-            <p className="text-black/80 mb-8 leading-relaxed">
+            <p className="mb-8 leading-relaxed text-black/80">
               Retrouvez nos informations de contact et notre localisation.
             </p>
 
             {/* Map */}
-            <div className="bg-gray-200 h-80 rounded-lg overflow-hidden mb-8">
+            <div className="mb-8 h-80 overflow-hidden rounded-lg bg-gray-200">
               <a
                 href="https://www.google.com/maps/search/802+Rue+Saint-Isidore+J5M+2V4+Saint-Lin-Laurentides+Canada"
                 target="_blank"
@@ -92,13 +108,16 @@ export default function Contact(): JSX.Element {
             {/* Contact information cards */}
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-brand-red text-white rounded-lg">
+                <div className="bg-brand-red rounded-lg p-2 text-white">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
                   <span className="text-sm text-black/60">Téléphone</span>
-                  <p className="text-black font-medium">
-                    <a href="tel:+14504391711" className="hover:text-brand-red transition-colors">
+                  <p className="font-medium text-black">
+                    <a
+                      href="tel:+14504391711"
+                      className="hover:text-brand-red transition-colors"
+                    >
                       +1 450-439-1711
                     </a>
                   </p>
@@ -106,13 +125,16 @@ export default function Contact(): JSX.Element {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-brand-red text-white rounded-lg">
+                <div className="bg-brand-red rounded-lg p-2 text-white">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
                   <span className="text-sm text-black/60">Courriel</span>
-                  <p className="text-black font-medium">
-                    <a href="mailto:contact@laporte.ca" className="hover:text-brand-red transition-colors">
+                  <p className="font-medium text-black">
+                    <a
+                      href="mailto:contact@laporte.ca"
+                      className="hover:text-brand-red transition-colors"
+                    >
                       contact@laporte.ca
                     </a>
                   </p>
@@ -120,25 +142,25 @@ export default function Contact(): JSX.Element {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-brand-red text-white rounded-lg">
+                <div className="bg-brand-red rounded-lg p-2 text-white">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
                   <span className="text-sm text-black/60">Adresse</span>
-                  <p className="text-black font-medium">
+                  <p className="font-medium text-black">
                     802 Rue Saint-Isidore, Saint-Lin-Laurentides, QC J5M 2V4
                   </p>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-brand-red text-white rounded-lg">
+                <div className="bg-brand-red rounded-lg p-2 text-white">
                   <Clock className="h-5 w-5" />
                 </div>
                 <div>
                   <span className="text-sm text-black/60">Heures d'ouverture</span>
-                  <p className="text-black font-medium">
-                    Lun - Jeu: 11h00 - 21h00 · Ven - Sam: 11h00 - 22h00 · Dim: 11h00 - 21h00
+                  <p className="font-medium text-black">
+                    Dim - Mer: 11h00 - 21h00 · Jeu - Sam: 11h00 - 22h00
                   </p>
                 </div>
               </div>
@@ -146,28 +168,37 @@ export default function Contact(): JSX.Element {
           </div>
 
           {/* Right - Form */}
-          <div className="bg-brand-offwhite p-8 rounded-2xl h-full flex flex-col shadow-card">
+          <div className="bg-brand-offwhite shadow-card flex h-full flex-col rounded-2xl p-8">
             {submitStatus.type === 'success' ? (
-              <div className="text-center flex-1 flex flex-col items-center justify-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Check className="w-8 h-8 text-green-600" />
+              <div className="flex flex-1 flex-col items-center justify-center text-center">
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
+                  <Check className="h-8 w-8 text-green-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-black mb-4">Merci!</h3>
-                <p className="text-lg text-black/70 mb-8 max-w-md">Nous vous répondrons sous peu.</p>
+                <h3 className="mb-4 text-2xl font-bold text-black">Merci!</h3>
+                <p className="mb-8 max-w-md text-lg text-black/70">
+                  Nous vous répondrons sous peu.
+                </p>
                 <button
                   onClick={() => {
                     setSubmitStatus({ type: null, message: '' });
-                    setFormData({ name: '', email: '', phone: '', subject: '', otherSubject: '', message: '' });
+                    setFormData({
+                      name: '',
+                      email: '',
+                      phone: '',
+                      subject: '',
+                      otherSubject: '',
+                      message: '',
+                    });
                   }}
-                  className="px-6 py-3 bg-brand-red text-white rounded-none hover:brightness-110 transition-colors duration-200 font-medium"
+                  className="bg-brand-red rounded-none px-6 py-3 font-medium text-white transition-colors duration-200 hover:brightness-110"
                 >
                   Envoyer un autre message
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
+              <form onSubmit={handleSubmit} className="flex flex-1 flex-col space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-black mb-2">
+                  <label className="mb-2 block text-sm font-medium text-black">
                     Nom <span className="text-brand-red">*</span>
                   </label>
                   <input
@@ -176,13 +207,13 @@ export default function Contact(): JSX.Element {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-black/20 bg-white text-black placeholder-black/40"
+                    className="w-full border border-black/20 bg-white px-4 py-3 text-black placeholder-black/40"
                     placeholder="Votre nom"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-black mb-2">
+                  <label className="mb-2 block text-sm font-medium text-black">
                     Courriel <span className="text-brand-red">*</span>
                   </label>
                   <input
@@ -191,13 +222,13 @@ export default function Contact(): JSX.Element {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-black/20 bg-white text-black placeholder-black/40"
+                    className="w-full border border-black/20 bg-white px-4 py-3 text-black placeholder-black/40"
                     placeholder="votre@email.com"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-black mb-2">
+                  <label className="mb-2 block text-sm font-medium text-black">
                     Téléphone <span className="text-brand-red">*</span>
                   </label>
                   <input
@@ -206,13 +237,13 @@ export default function Contact(): JSX.Element {
                     value={formData.phone}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-black/20 bg-white text-black placeholder-black/40"
+                    className="w-full border border-black/20 bg-white px-4 py-3 text-black placeholder-black/40"
                     placeholder="Votre téléphone"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-black mb-2">
+                  <label className="mb-2 block text-sm font-medium text-black">
                     Sujet <span className="text-brand-red">*</span>
                   </label>
                   <select
@@ -220,7 +251,7 @@ export default function Contact(): JSX.Element {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-black/20 bg-white text-black"
+                    className="w-full border border-black/20 bg-white px-4 py-3 text-black"
                   >
                     <option value="">Choisir un sujet</option>
                     <option value="reservation">Réservation</option>
@@ -232,20 +263,22 @@ export default function Contact(): JSX.Element {
 
                 {formData.subject === 'other' && (
                   <div>
-                    <label className="block text-sm font-medium text-black mb-2">Autre sujet</label>
+                    <label className="mb-2 block text-sm font-medium text-black">
+                      Autre sujet
+                    </label>
                     <input
                       type="text"
                       name="otherSubject"
                       value={formData.otherSubject}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-black/20 bg-white text-black placeholder-black/40"
+                      className="w-full border border-black/20 bg-white px-4 py-3 text-black placeholder-black/40"
                       placeholder="Précisez le sujet"
                     />
                   </div>
                 )}
 
                 <div className="flex-1">
-                  <label className="block text-sm font-medium text-black mb-2">
+                  <label className="mb-2 block text-sm font-medium text-black">
                     Message <span className="text-brand-red">*</span>
                   </label>
                   <textarea
@@ -254,7 +287,7 @@ export default function Contact(): JSX.Element {
                     onChange={handleInputChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-black/20 bg-white text-black placeholder-black/40"
+                    className="w-full border border-black/20 bg-white px-4 py-3 text-black placeholder-black/40"
                     placeholder="Écrivez votre message..."
                   />
                 </div>
@@ -263,8 +296,10 @@ export default function Contact(): JSX.Element {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full font-semibold py-3 px-6 rounded-none transition-colors duration-200 ${
-                      isSubmitting ? 'bg-black/20 text-black/60 cursor-not-allowed' : 'bg-brand-red text-white hover:brightness-110'
+                    className={`w-full rounded-none px-6 py-3 font-semibold transition-colors duration-200 ${
+                      isSubmitting
+                        ? 'cursor-not-allowed bg-black/20 text-black/60'
+                        : 'bg-brand-red text-white hover:brightness-110'
                     }`}
                   >
                     {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
@@ -278,4 +313,3 @@ export default function Contact(): JSX.Element {
     </section>
   );
 }
-
