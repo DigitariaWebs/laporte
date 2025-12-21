@@ -87,29 +87,31 @@ export default function HeroBanner(): ReactElement {
       </div>
 
       {/* Overlay with logo, greeting, and buttons */}
-      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center">
-        <Image
-          src={assets.logo.src}
-          alt={assets.logo.alt}
-          width={assets.logo.width}
-          height={assets.logo.height}
-          className="mb-4"
-        />
-        <h1 className="font-display mb-6 text-2xl tracking-wide text-white uppercase">
-          Bienvenue
-        </h1>
-        <div className="flex gap-4">
+      <div className="absolute inset-0 z-10 flex items-center justify-center gap-2 text-center md:flex-col md:gap-4">
+        <div className="flex flex-col items-center justify-center gap-2 md:gap-4">
+          <Image
+            src={assets.logo.src}
+            alt={assets.logo.alt}
+            width={assets.logo.width}
+            height={assets.logo.height}
+            className="w-14 md:w-30"
+          />
+          <h1 className="font-display mb-4 text-center text-base tracking-wide text-white uppercase md:mb-6 md:text-2xl">
+            Bienvenue
+          </h1>
+        </div>
+        <div className="flex flex-col gap-2 md:flex-row md:gap-4">
           <a
             href={assets.pdfs.menu}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-brand-red font-display hover:bg-brand-red/90 rounded-lg px-6 py-3 text-lg tracking-wide text-white uppercase transition-colors"
+            className="bg-brand-red font-display hover:bg-brand-red/90 rounded-lg px-2 py-1 text-sm tracking-wide text-white uppercase transition-colors md:px-6 md:py-3 md:text-lg"
           >
             Parcourir le menu
           </a>
           <a
             href="#"
-            className="font-display text-brand-red rounded-lg bg-white px-6 py-3 text-lg tracking-wide uppercase transition-colors hover:bg-gray-100"
+            className="font-display text-brand-red rounded-lg bg-white px-2 py-1 text-sm tracking-wide uppercase transition-colors hover:bg-gray-100 md:px-6 md:py-3 md:text-lg"
           >
             Commander maintenant
           </a>
