@@ -110,10 +110,10 @@ export default function HeroBanner(): ReactElement {
             Parcourir le menu
           </a>
           <a
-            href="#"
+            href="tel:+14504391711"
             className="font-display text-brand-red rounded-lg bg-white px-2 py-1 text-sm tracking-wide uppercase transition-colors hover:bg-gray-100 md:px-6 md:py-3 md:text-lg"
           >
-            Commander maintenant
+            Appeler maintenant
           </a>
         </div>
       </div>
